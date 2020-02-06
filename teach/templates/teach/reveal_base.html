@@ -5,15 +5,15 @@
   <meta charset="utf-8">
   <title>{% block title %}{% endblock %}</title>
 
-  <link rel="stylesheet" href="{% static "teach/css/bootstrap.min.css" %}">
-  <script src="{% static "teach/js/jquery.min.js" %}"></script>
-  <script src="{% static "teach/js/popper.min.js" %}"></script>
-  <script src="{% static "teach/js/bootstrap.min.js" %}"></script>
-  <link rel="stylesheet" href="{% static "teach/css/reveal.css" %}">
-  <link rel="stylesheet" href="{% static "teach/css/theme/white.css" %}">
-  <link rel="stylesheet" href="{% static "teach/lib/css/zenburn.css" %}">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/reveal.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/css/theme/white.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/lib/css/zenburn.min.css">
   <!--link rel="stylesheet" href="{% static "teach/css/print/pdf.css" %}"-->
-  <script src="{% static "teach/js/head.min.js" %}"></script>  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/headjs/1.0.3/head.min.js"></script>
 </head>
 <body>
 
@@ -23,31 +23,7 @@
           {% endblock %}
       </div>
     </div>
-    <script src="{% static "teach/js/reveal.js" %}"></script>
-    <script>
-    Reveal.initialize({ 
-        dependencies: [
-            // Cross-browser shim that fully implements classList - https://github.com/eligrey/classList.js/
-            { src: '{% static "teach/lib/js/classList.js" %}', condition: function() { return !document.body.classList; } },
-    
-            // Interpret Markdown in <section> elements
-            { src: '{% static "teach/plugin/markdown/marked.js" %}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-            { src: '{% static "teach/plugin/markdown/markdown.js" %}', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-    
-            // Syntax highlight for <code> elements
-            //{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
-    
-            // Zoom in and out with Alt+click
-            { src: '{% static "teach/plugin/zoom-js/zoom.js" %}', async: true },
-    
-            // Speaker notes
-            { src: '{% static "teach/plugin/notes/notes.js" %}', async: true },
-    
-            // MathJax
-            { src: '{% static "teach/plugin/math/math.js" %}', async: true }
-        ]
-     });
-    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/reveal.js/3.6.0/js/reveal.min.js"></script>
     <script src="{% static "teach/js/reveal-init.js" %}"></script>
 </body>
 </html>
